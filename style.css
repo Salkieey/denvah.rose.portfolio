@@ -1,0 +1,672 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+inter-uniquifier {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+/* GENERAL RULES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Inter", sans-serif;
+
+}
+
+:root {
+    --bg-color: #d9feff;
+    --second-bg-color: #04142e;
+    --highlighted-color: #ee4e7d;
+    --font-color: #2b2b2b;
+    --main-color: #64bfde;
+}
+
+/* These are rules set for the var() tag later, it's like a shortcut for our preset colours
+instead of needing to copy paste the colour tags, it also makes it easier
+to change the colours later, super helpful  */
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  height: 100%;
+}
+/* We hide the overflow-x, so that it doesn't look messy in the final project
+otherwise, it would be easy to slide around and see the blank spaces, which we 
+don't really want */
+
+#wrapper {
+  max-width: 1300px;
+  margin: auto; 
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--font-color);
+  height: 100%;
+}
+
+/* BACKGROUND'S */
+
+#bg {
+  background-image: url("images/Background/bg1.png");
+  height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#bg2 {
+  background-image: url("images/Background/bg2.png");
+  height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#bg3 {
+  background-image: url("images/Background/bg3.png");
+  height: 100%;
+  position: sticky;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* HEADER */
+
+header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background: rgba(255, 255, 255, 0.705);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: var(--font-color);
+  font-weight: 600;
+  cursor: default;
+}
+
+span {
+  color: var(--highlighted-color);
+}
+/* NAVIGATION */
+
+.navbar a {
+  font-size: 1.7rem ;
+  color: var(--font-color);
+  margin-left: 4rem;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--main-color);
+}
+
+#menu-icon {
+  font-size: 3.6rem;
+  color: var(--font-color);
+  display: none;
+  
+}
+/* this will be used later in the @media sections, this is how we create
+the hamburger menu*/
+
+/* HOME CONTENT */
+
+#home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 60px;
+  
+}
+
+#home-content {
+  padding: 45px;
+}
+/* added this to make a space between the main text and image */
+
+#home-content h3 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+#home-content h1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+} 
+
+#home-content p {
+  font-size: 1.6rem;
+}
+
+#home img {
+  border-radius: 10px;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  margin: 1rem 0;
+  padding-left: 85px;
+  transition: 5s ease;
+  padding-top: 5px;
+}
+
+.social-media a {
+  background: transparent;
+  border: 2px solid var(--main-color);
+  border-radius: 10px;
+  padding: 6px 10px ;
+  font-size: 2.5rem;
+  color: var(--main-color);
+  margin: 1rem ;
+  
+}
+
+.social-media a:hover {
+  background: var(--main-color);
+  color: var(--bg-color);
+}
+
+.button {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  font-size: 1.8rem;
+  color: var(--bg-color);
+  letter-spacing: .1rem;
+  font-weight: 600;
+  margin-top: 1.2rem;
+  transition: .5s ease;
+  }
+
+.button:hover {
+  transform: scale(1.03);
+}
+
+/* ABOUT CONTENT */
+
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 60px;
+  position: relative;
+}
+
+#about-img {
+  width: 35vw;
+}
+
+.about-img1 {
+  border-radius: 3%;
+}
+.about-content {
+  padding: 45px;
+}
+
+.about-content h1 {
+  text-align: left;
+  font-size: 4.5rem;
+}
+
+.about-content h2 {
+  text-align: left;
+  line-height: 1.2;
+}
+
+.about-content p {
+  font-size: 1.6rem;
+}
+
+/* PORTFOLIO */
+
+#portfolio h1 {
+  margin-bottom: 4rem;
+  font-size: 4.5rem;
+  text-align: center;
+  padding-top: 4rem;
+  color: #fff;
+}
+
+#portfolio img {
+  border-radius: 3px;
+  transition: ease 0.5s;
+}
+
+#portfolio-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 45px;
+  padding: 0 60px 60px;
+}
+
+.portfolio-boxes {
+  position: relative;
+  height: 800px;
+  width: 300px;
+
+}
+
+.portfolio-layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #382229;
+  visibility: visible;
+  transition: ease 0.5s;
+  text-align: center;
+  padding: 60px 10px;
+  background: rgba(221, 236, 255, 0.432);
+  z-index: 1;
+}
+
+.portfolio-layer h4 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+.portfolio-layer p {
+  font-size: 2rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.portfolio-boxes:hover .portfolio-layer{
+ transform: scale(1.05);
+}
+
+.portfolio-boxes:hover img {
+  transform: scale(1.05);
+  
+}
+
+/* ORACLE CARDS */
+
+#oracle-description {
+  align-items: center;
+  justify-content: center;
+}
+
+#oracle-description h1 {
+  font-size: 4.5rem;
+  padding: 5px 60px;
+}
+
+#oracle-description h2 {
+  font-size: 3rem;
+  padding: 0 60px;
+}
+
+#oracle-description h3 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  font-style: italic;
+  padding: 0 60px;
+}
+
+#oracle-description p {
+  font-size: 2rem;
+  padding:5px 60px;
+}
+
+.oracle-banner {
+  padding-top: 10px;
+  width: 99%;
+  max-width: 1134px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.monuments {
+  display: flex;
+  justify-content: center;
+}
+
+.monuments img {
+  padding: 5px 60px;
+}
+
+.medusa-img {
+  max-width: 460px;
+  max-height: 599px;
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+.trung {
+  max-width: 268px;
+  width: 100%;
+  height: auto;
+}
+
+.niobe {
+  max-width: 688px;
+  width: 100%;
+  height: auto;
+}
+
+/*Oracle Card's Animation/Content */
+
+#oracle-final {
+  padding: 0 60px;
+}
+
+#oracle-final h1 {
+  font-size: 4.5rem;
+  padding: 5px 0;
+}
+
+#oracle-final p {
+  font-size: 2rem;
+  padding: 5px 0;
+}
+
+#three-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+#three-cards p {
+  font-size: 1.5rem;
+  padding: 10px 50px 0 0;
+  margin-bottom: 20px;
+}
+
+.cards img {
+  margin: 25px 0;
+  transition: ease 1s;
+}
+
+.cards img:hover {
+  transform: scale(1.05);
+}
+
+/* iSOMETRIC ROOM */
+
+#scene-header img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+#scene-header h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  justify-content: center;
+  padding: 13%;
+  font-size: 4rem;
+  color: #fff;
+}
+
+.room-section h1{
+  font-size: 4.4rem;
+  padding-top: 10px;
+}
+
+.room-section p {
+  font-size: 2rem;
+  padding: 10px 0;
+}
+
+#assets {
+  display: flex;
+}
+
+#assets img {
+  width: 30%;
+  height: auto;
+  padding: 5px;
+  border-radius: 2%;
+}
+
+#scene-final img {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: ease 1s;
+}
+
+#scene-final img:hover {
+  transform: scale(1.05);
+}
+
+#scene-closeups {
+  display: flex;
+}
+
+#scene-closeups img {
+  flex: 33.33%;
+  padding: 15px;
+  border-radius: 3%;
+  transition: ease 1s;
+}
+
+#scene-closeups img:hover {
+  transform: scale(1.05);
+}
+
+/* FAE FRIENDS */
+#fairy-header {
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-bottom: 5px;
+}
+
+#fairy-header img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+#fairy-header h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  justify-content: center;
+  padding: 13%;
+  font-size: 4rem;
+}
+
+#fae-friends h1 {
+  font-size: 4.5rem;
+  margin-bottom: 1.5%;
+}
+
+#fae-friends h2 {
+  font-size: 3rem;
+  font-style: italic;
+  margin-bottom: 1.5%;
+}
+
+#fae-friends p {
+  font-size: 2rem;
+  margin-bottom: 1.5%;
+}
+
+.fairy-concepts {
+  display: flex;
+  justify-content: center;
+}
+
+.fairy-concepts img {
+  width: 40%;
+  height: auto;
+  margin: 1.02%;
+}
+
+#lineup {
+  display: flex;
+  justify-content: center;
+}
+
+#lineup img {
+  width: 99%;
+  height: auto;
+}
+.multiple-img img {
+  width: 23%;
+  height: auto;
+}
+
+.fairy-concept-sketch {
+  display: flex;
+  justify-content: center;
+}
+
+.fairy-concept-sketch img {
+  width: 15%;
+  height: auto;
+  margin: 1.02%;
+}
+
+.two-img {
+  display: flex;
+  flex-direction: row;
+}
+
+.two-img img {
+  margin: auto;
+  width: 40%;
+  height: auto;
+  
+}
+.columns {
+  display: flex;
+  justify-content: center;
+}
+
+.columns img {
+  position: relative;
+  margin: 1.5%;
+  width: 20%;
+  height: auto;
+}
+
+.big-img {
+  display: flex;
+  justify-content: center;
+}
+
+.big-img img {
+  width: 60%;
+  height: auto;
+  margin: 1.5%;
+}
+
+/* GALLERY */
+
+.gallery-banner {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+#banner-gallery {
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-bottom: 5px;
+}
+
+#banner-gallery article {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  justify-content: center;
+  padding: 13%;
+  background-color: rgba(196, 220, 255, 0.267);
+}
+
+.gallery article {
+  margin: 10px;
+  text-align: center;
+}
+
+#banner-gallery h1 {
+  font-size: 4.5rem;
+}
+
+#banner-gallery p {
+  font-size: 1.6rem;
+}
+
+.gallery img {
+  border-radius: 1%;
+}
+
+#composition {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+
+.img-columns {
+  flex: 25%;
+  max-width: 25%;
+  padding: 10px;
+}
+
+.img-columns img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  transition: ease 1s;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}

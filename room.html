@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denvah-Rose's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!--        ICONS          -->
+    <script src="https://kit.fontawesome.com/2e79186107.js" crossorigin="anonymous"></script> 
+</head>
+<body>
+    <!--        HEADER          -->
+            <header>
+                <a href="index.html" class="logo"> Portfolio</a>
+                <i class="fa-solid fa-bars" id="menu-icon"></i>
+                <!-- I use id and class interchangebly throughout this,
+                        however, the difference is that class can be used multple
+                        times in a page, but id is only used to label a single element-->
+                <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html"class="active">Projects</a>
+                <a href="gallery.html">Gallery</a>
+                </nav>
+            </header>
+        <div id="wrapper">
+            <!--        CONTENT         --> 
+            <section id="scene-header">
+                <img src="images/scene-banner.png" alt="Toy Workshop Banner">
+
+                <h1> Isometric Room: Toymaker's Studio</h1>
+            </section>
+
+            <section class="room-section">
+                <article>
+                    <h1>Project Outline</h1>
+                    <p>In my studies I was tasked with making mutliple assets each week, my last task was
+                        to put these assets together to make an environmental scene. The two assets I chose 
+                        were my toy train and cat robot.
+                    </p>
+                </article>
+
+                    <div id="assets">
+                        <img src="images/toy-train.png" alt="3D Toy train">
+                        <img src="images/robot-cat.png" alt="3D Toy Cat">
+                    </div>        
+            </section>
+
+            <section class="room-section">
+                <article>
+                    <h1>My Process</h1>
+                    <p>
+                        While brainstorming ideas for environment's, I found various images of isometric rooms,
+                        as this was one of my bigger projects, I wanted to create something visually pleasing, but 
+                        simple so I could finish it before the deadline. I beleived a isometric room would be a great way
+                        to execute a simple scene, that can still be detailed. 
+                    </p>
+                    <p>
+                        I also settled on the idea for a toymakers studio, because I modeled these two assets after
+                        children's toys. I thought having a toy story inspired scene would also bring more character to a simple environment,
+                        and aligned with the theme.
+                    </p>
+                </article>
+            </section>
+
+            <section class="room-section">
+                <h1>Final Project</h1>
+                 <div id="scene-closeups">
+                    <img src="images/closeup-blend5.png" alt="Closeup's of Final Scene">
+                    <img src="images/closeup-blend2.png" alt="Closeup's of Final Scene">
+                    <img src="images/closeup-blend3.png" alt="Closeup's of Final Scene">             
+                </div>
+
+                <div id="scene-final">
+                    <img src="images/Weekly-Scene-Image-Render.png" alt="Final Scene">
+                </div>               
+            </section>
+
+        </div>
+</body>
+</html>
