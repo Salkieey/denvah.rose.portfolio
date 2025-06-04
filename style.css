@@ -3,8 +3,6 @@
 
 inter-uniquifier {
   font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
   font-style: normal;
 }
 
@@ -59,7 +57,8 @@ body {
 #bg {
   background-image: url("images/Background/bg1.png");
   height: 100%;
-
+ /* this is how I added the background image, I have a few different ones, I think I could have optimised this more but
+  I'm not sure how, I tried making it fixed and sticky but it didn't seem to work :( */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -91,10 +90,13 @@ header {
   width: 100%;
   padding: 2rem 9%;
   background: rgba(255, 255, 255, 0.705);
+  /* I used rgba here because using the opacity tag can make parented items also transparent, but with rgba you can control opacity as well*/
   display: flex;
   justify-content: space-between;
+  /* I did this to get a nice space between sections without a padding tag, it makes it responsive across devices too*/
   align-items: center;
   z-index: 100;
+  /* this is to keep things on top, 100 for the header so it is always visibile*/
 }
 
 .logo {
@@ -106,6 +108,7 @@ header {
 
 span {
   color: var(--highlighted-color);
+  /* Made this to make it easy to change font colour's in a bit of text, without needing a div tag */
 }
 /* NAVIGATION */
 
@@ -118,6 +121,7 @@ span {
 .navbar a:hover,
 .navbar a.active {
   color: var(--main-color);
+  /* This is how I get the colour blue when hovering */
 }
 
 #menu-icon {
@@ -173,6 +177,7 @@ the hamburger menu*/
   padding-left: 20%;
   transition: 5s ease;
   padding-top: 5px;
+  /* I use the transition tag alot after this, I go from 5s-1s just to make it look a bit nicer */
 }
 
 .social-media a {
@@ -183,12 +188,13 @@ the hamburger menu*/
   font-size: 2.5rem;
   color: var(--main-color);
   margin: 1rem ;
-  
+  /* This is how I made the buttons look like buttons, I also customise the colours and borders here */
 }
 
 .social-media a:hover {
   background: var(--main-color);
   color: var(--bg-color);
+ /* This is how you get the colour switch when hovering, I really like this effect */
 }
 
 .button {
@@ -202,10 +208,13 @@ the hamburger menu*/
   font-weight: 600;
   margin-top: 1.2rem;
   transition: .5s ease;
+  /* I customised the button to be more rounder than the other ones, it is also optimised more for text */
   }
 
 .button:hover {
   transform: scale(1.03);
+  /* I use this alot, its definetly my favourite hover effect, it's just a nice interactive touch, and it draws attention to
+  both important items and clickable ones*/
 }
 
 /* ABOUT CONTENT */
@@ -221,23 +230,22 @@ the hamburger menu*/
 
 #about-img {
   width: 35vw;
+  height: auto;
+  justify-content: center;
 }
 
 .about-img1 {
   border-radius: 3%;
 }
 .about-content {
-  padding: 45px;
+  margin: 3%;
 }
 
-.about-content h1 {
-  text-align: left;
-  font-size: 4.5rem;
-}
 
 .about-content h2 {
   text-align: left;
   line-height: 1.2;
+  font-size: 4.5rem;
 }
 
 .about-content p {
@@ -322,12 +330,17 @@ the hamburger menu*/
 }
 
 #oracle-description h2 {
-  font-size: 3rem;
-  padding: 0 60px;
+  font-size: 4.5rem;
+  padding: 5px 60px;
 }
 
 #oracle-description h3 {
-  font-size: 2.5rem;
+    font-size: 3rem;
+  padding: 0 60px;
+}
+
+#oracle-description h4 {
+ font-size: 2.5rem;
   font-weight: 500;
   font-style: italic;
   padding: 0 60px;
@@ -446,6 +459,11 @@ the hamburger menu*/
   padding-top: 10px;
 }
 
+.room-section h2{
+  font-size: 4.4rem;
+  padding-top: 10px;
+}
+
 .room-section p {
   font-size: 2rem;
   padding: 10px 0;
@@ -522,6 +540,11 @@ the hamburger menu*/
 }
 
 #fae-friends h2 {
+  font-size: 4.5rem;
+  margin-bottom: 1.5%;
+}
+
+#fae-friends h3 {
   font-size: 3rem;
   font-style: italic;
   margin-bottom: 1.5%;
@@ -740,4 +763,3 @@ the hamburger menu*/
     font-size: 1.5rem;
   }
 }
-
